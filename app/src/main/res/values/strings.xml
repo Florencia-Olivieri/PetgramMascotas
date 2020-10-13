@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PetgramMascotas</string>
+    <string name="tituloActivityMF"> Top 5 mascotas favoritas</string>
+    <string name="nombre_mascota">Firulais</string>
+    <string name="numero_likes">5</string>
+    <string name="pnombre">Nombre</string>
+    <string name="pNLikes">NumeroLikes</string>
+    <string name="imagenhueso">imagen hueso</string>
+    <string name="btnHueso">boton hueso</string>
+    <string name="btnFavorito">imagen estrella negra con un 5 adentro</string>
+    <string name="fotoperro">fotos de perros de distinas razas</string>
+</resources>

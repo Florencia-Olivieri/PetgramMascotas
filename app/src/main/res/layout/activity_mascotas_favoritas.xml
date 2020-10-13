@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MascotasFavoritas">
+
+
+    <!--<ListView
+        android:id="@+id/lstMascotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTituloApp">
+    </ListView> -->
+
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/icons8_atr_s_48"
+        android:onClick="irAtras">
+
+    </Button>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/btnAtras"
+        android:id="@+id/rvMascotasFav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
