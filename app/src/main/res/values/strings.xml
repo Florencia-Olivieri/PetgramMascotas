@@ -12,4 +12,8 @@
     <string name="fotoperro">fotos de perros de distinas razas</string>
     <string name="mAcercaDe">Acerca de</string>
     <string name="mContacto">Contacto</string>
+    <string name="texto_tit_acercade">Acerca de:</string>
+    <string name="texto_nombre_desar">Esta aplicación fue desarrollada por Florencia Olivieri.</string>
+    <string name="texto_tit_contacto">Contáctame</string>
+    <string name="btn_enviar_comentario">Enviar comentario</string>
 </resources>
