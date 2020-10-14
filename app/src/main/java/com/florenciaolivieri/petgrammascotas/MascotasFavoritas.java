@@ -74,7 +74,7 @@ public class MascotasFavoritas extends AppCompatActivity {
     public void inicializarListaMascotas(){
         mascotas = new ArrayList<Mascota>();
 
-        mascotas.add(new Mascota(R.drawable.foto_perro_rosa,"Minerva", "8"));
+        mascotas.add(new Mascota(R.drawable.foto_perro_rosa,"Sirius", "8"));
         mascotas.add(new Mascota(R.drawable.fotoperro_jruss,"Laika", "4"));
         mascotas.add(new Mascota(R.drawable.fotoperro_milu,"Milu", "4"));
         mascotas.add(new Mascota(R.drawable.foto_perro_cocker,"Kitty", "5"));
