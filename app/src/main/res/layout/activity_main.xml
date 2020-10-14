@@ -5,24 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    android:paddingLeft="16dp"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp"
     tools:context=".MainActivity">
 
+    <include android:id="@+id/miActionBar"
+        layout="@layout/actionbar"
+       >
 
-    <Button
-        android:id="@+id/btnFavoritos"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginLeft="300dp"
-        android:background="@drawable/icons8_hotel_48"
-        android:contentDescription="@string/btnFavorito"
-        android:onClick="irFavoritos">
+    </include>
 
-    </Button>
+
 
     <!--<ListView
         android:id="@+id/lstMascotas"
@@ -35,7 +26,7 @@
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btnFavoritos">
+        android:layout_below="@+id/miActionBar">
 
     </androidx.recyclerview.widget.RecyclerView>
 
