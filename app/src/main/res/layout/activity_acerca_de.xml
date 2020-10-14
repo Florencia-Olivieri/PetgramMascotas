@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightColorPrimary"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".AcercaDe">
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icons8_atr_s_48"
+
+        >
+
+    </Button>
+
+
+    <TextView
+        android:id="@+id/tvTituloAcercaDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnVolver"
+        android:layout_marginTop="10dp"
+        android:text="@string/texto_tit_acercade"
+        android:textColor="@android:color/background_dark"
+        android:textColorHighlight="@color/cardview_light_background"
+        android:textSize="24sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvNombreDesarrollador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTituloAcercaDe"
+        android:layout_marginTop="10dp"
+        android:text="@string/texto_nombre_desar"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"></TextView>
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightColorPrimary"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".Contacto">
+
+    <TextView
+        android:id="@+id/tvTituloContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/texto_tit_contacto"
+        android:textColor="@android:color/background_dark"
+        android:textColorHighlight="@color/cardview_light_background"
+        android:textSize="26sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_below="@+id/tvTituloContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_enviar_comentario"
+        android:textSize="20sp"
+        android:background="@color/colorAccent">
+
+    </Button>
+
+</RelativeLayout>

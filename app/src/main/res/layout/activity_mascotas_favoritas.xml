@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
+    android:background="@color/lightColorPrimary"
     tools:context=".MascotasFavoritas">
 
 
@@ -15,9 +15,9 @@
         android:layout_below="@+id/tvTituloApp">
     </ListView> -->
 
-    <include android:id="@+id/miActionBar"
-        layout="@layout/actionbar"
-        >
+    <include
+        android:id="@+id/miActionBar"
+        layout="@layout/actionbar">
 
     </include>
 
@@ -26,18 +26,17 @@
         android:id="@+id/btnAtras"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:background="@drawable/icons8_atr_s_48"
         android:layout_below="@id/miActionBar"
+        android:background="@drawable/icons8_atr_s_48"
         android:onClick="irAtras">
 
     </Button>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/btnAtras"
         android:id="@+id/rvMascotasFav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_below="@+id/btnAtras">
 
     </androidx.recyclerview.widget.RecyclerView>
 
