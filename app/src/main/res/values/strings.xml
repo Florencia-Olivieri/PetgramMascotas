@@ -15,5 +15,9 @@
     <string name="texto_tit_acercade">Acerca de:</string>
     <string name="texto_nombre_desar">Esta aplicación fue desarrollada por Florencia Olivieri.</string>
     <string name="texto_tit_contacto">Contáctame</string>
+    <string name="edtNombre">Nombre</string>
+    <string name="edtCorreo">Correo electrónico</string>
+    <string name="edtComentario">Comentario</string>
     <string name="btn_enviar_comentario">Enviar comentario</string>
+
 </resources>
