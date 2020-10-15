@@ -11,11 +11,19 @@
     android:paddingBottom="16dp"
     tools:context=".Contacto">
 
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/icons8_atr_s_48"
+        android:onClick="irAtras"/>
+
     <TextView
         android:id="@+id/tvTituloContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_below="@id/btnAtras"
         android:text="@string/texto_tit_contacto"
         android:textColor="@android:color/background_dark"
         android:textColorHighlight="@color/cardview_light_background"
@@ -23,16 +31,48 @@
         android:textStyle="bold">
     </TextView>
 
-    <Button
-        android:id="@+id/btnEnviar"
-        android:layout_below="@+id/tvTituloContacto"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvTituloContacto"
+        android:layout_marginTop="20dp"
+        android:hint="@string/edtNombre"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNombre"
+        android:layout_marginTop="20dp"
+        android:hint="@string/edtCorreo"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtCorreo"
+        android:layout_marginTop="20dp"
+        android:hint="@string/edtComentario"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtComentario"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"
         android:text="@string/btn_enviar_comentario"
-        android:textSize="20sp"
-        android:background="@color/colorAccent">
+        android:textAllCaps="false"
+        android:textSize="24sp">
 
     </Button>
+
+
+
+
 
 </RelativeLayout>
