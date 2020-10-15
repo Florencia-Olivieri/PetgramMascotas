@@ -3,69 +3,64 @@ package com.florenciaolivieri.petgrammascotas;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Toast;
+
+import com.florenciaolivieri.petgrammascotas.adapter.MascotaAdaptador;
+import com.florenciaolivieri.petgrammascotas.adapter.PageAdapter;
+import com.florenciaolivieri.petgrammascotas.fragments.PerfilFragment;
+import com.florenciaolivieri.petgrammascotas.fragments.RecyclerViewFragment;
+import com.florenciaolivieri.petgrammascotas.pojo.Mascota;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> mascotas;
-    private RecyclerView listaMascotas;
+
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
-        setSupportActionBar(miActionBar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        setUpViewPager();
 
-        //manipulo el RecyclerView de Mascotas
-        listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
 
-        //defino cómo mostrar el RecyclerView  en una lista (LinearLayout)
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        //pongo orientación vertical para mostrar las tarjetas
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
-        //Indico que el RecyclerView se comporte como un LinearLayout
-        listaMascotas.setLayoutManager(llm);
+        if (toolbar != null){
+            setSupportActionBar(toolbar);
+        }
+    }
 
-        // Inicializo lista de Mascotas
-        inicializarListaMascotas();
-        inicializarAdaptador();
 
-        /*
-        //casteo el ListView
-        ListView lstMascotas = (ListView) findViewById(R.id.lstMascotas);
-        //para llevar el ArrayList al ListView necesito un Adaptador
-        lstMascotas.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombresMascota));
-        lstMascotas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    private ArrayList<Fragment> agregarfragments() {
+        ArrayList<Fragment> fragments = new ArrayList<>();
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, MascotasFavoritas.class);
-                //enviar intent con parametros
-                intent.putExtra(getResources().getString(R.string.pnombre), mascotas.get(position).getNombre());
-                intent.putExtra(getResources().getString(R.string.pNLikes), mascotas.get(position).getNumeroLikes());
-                startActivity(intent)
-                finish();
+        fragments.add(new RecyclerViewFragment());
+        fragments.add(new PerfilFragment());
 
-            }
-        });
-        */
+        return fragments;
+    }
+
+    private void setUpViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), 2, agregarfragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_dog);
     }
 
     @Override
@@ -91,23 +86,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void inicializarAdaptador() {
-        //instancio MascotaAdaptador que recibe la lista de mascotas inicializasa
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
-        listaMascotas.setAdapter(adaptador);
-    }
 
-    public void inicializarListaMascotas(){
-        mascotas = new ArrayList<Mascota>();
-
-        mascotas.add(new Mascota(R.drawable.foto_perro_cocker,"Kitty", "5"));
-        mascotas.add(new Mascota(R.drawable.fotoperro_milu,"Milu", "4"));
-        mascotas.add(new Mascota(R.drawable.fotoperro_jruss,"Laika", "4"));
-        mascotas.add(new Mascota(R.drawable.foto_perro_salchicha,"Lupe", "6"));
-        mascotas.add(new Mascota(R.drawable.foto_perro_plato_comida,"Odie", "1"));
-        mascotas.add(new Mascota(R.drawable.foto_perro_rosa,"Sirius", "8"));
-
-    }
 
 
     public void irFavoritos(View v) {

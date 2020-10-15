@@ -2,16 +2,16 @@ package com.florenciaolivieri.petgrammascotas;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+
+import com.florenciaolivieri.petgrammascotas.adapter.MascotaAdaptador;
+import com.florenciaolivieri.petgrammascotas.pojo.Mascota;
 
 import java.util.ArrayList;
 
@@ -70,6 +70,8 @@ public class MascotasFavoritas extends AppCompatActivity {
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
         listaMascotasFav.setAdapter(adaptador);
     }
+
+
 
     public void inicializarListaMascotas(){
         mascotas = new ArrayList<Mascota>();
