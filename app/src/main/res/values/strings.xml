@@ -19,5 +19,7 @@
     <string name="edtCorreo">Correo electrónico</string>
     <string name="edtComentario">Comentario</string>
     <string name="btn_enviar_comentario">Enviar comentario</string>
+    <string name="nombre_perfil">Laika</string>
+
 
 </resources>
